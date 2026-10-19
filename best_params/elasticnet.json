@@ -1,0 +1,4 @@
+{
+  "elasticnet__alpha": 0.001,
+  "elasticnet__l1_ratio": 0.9
+}

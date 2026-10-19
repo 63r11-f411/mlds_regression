@@ -10,10 +10,11 @@ CV_FOLDS = 5
 SUBMISSION_DIR = ROOT / "submission"
 BEST_PARAMS_DIR = ROOT / "best_params"
 SCORE_LOG = ROOT / "scores.txt"
+DROP_TRAIN_OUTLIERS = True
 
 @dataclass(frozen=True)
 class RunConfig:
-    models: tuple[str, ...] = ('ridge',)
+    models: tuple[str, ...] = ('elasticnet',)
     tune_hyperparameters: bool = True
     cross_validate: bool = True
     save_test_results: bool = True

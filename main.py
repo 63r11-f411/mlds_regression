@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from config import RUNCONF, DATA_DIR, TARGET, METRIC, RANDOM_STATE
+from config import RUNCONF, DATA_DIR, TARGET, METRIC, RANDOM_STATE, DROP_TRAIN_OUTLIERS
 from models import MODELS, build_model, resolve_params
 from sklearn.linear_model import Ridge
 from sklearn.pipeline import Pipeline
@@ -19,13 +19,11 @@ if __name__ == "__main__":
     train = pd.read_csv(DATA_DIR / "train.csv")
     train.drop("Id", axis=1, inplace=True)
 
-
-    #TODO: add drop outliers flag in config
-    train = train[~((train['GrLivArea'] > 4000) & (np.log1p(train['SalePrice']) < 12.5))]
+    if DROP_TRAIN_OUTLIERS:
+        train = train[~((train['GrLivArea'] > 4000) & (np.log1p(train['SalePrice']) < 12.5))]
 
     X, y = train.drop(columns=[TARGET]), train[TARGET]
     y = np.log1p(y)
-
     
     X_test = pd.read_csv(DATA_DIR / "test.csv")
     test_ids = X_test.pop("Id")

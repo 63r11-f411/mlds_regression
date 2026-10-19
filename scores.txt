@@ -50,3 +50,46 @@
 [-0.11356996 -0.10886771 -0.12096011 -0.11720927 -0.10024261]
 params: {'ridge__alpha': np.float64(10.0)}
 
+20261019_185813 | lasso | Param tuned | neg_root_mean_squared_error
+-0.1109 ± 0.0063
+[-0.10807677 -0.10986139 -0.12070493 -0.11425557 -0.10181599]
+params: {'lasso__alpha': np.float64(0.00039810717055349735)}20261019_185942 | lasso | Param tuned | neg_root_mean_squared_error
+-0.1109 ± 0.0063
+[-0.10807677 -0.10986139 -0.12070493 -0.11425557 -0.10181599]
+params: {'lasso__alpha': np.float64(0.00039810717055349735)}
+
+20261019_190247 | lasso | Param tuned | neg_root_mean_squared_error
+-0.1109 ± 0.0063
+[-0.10807677 -0.10986139 -0.12070493 -0.11425557 -0.10181599]
+params: {'lasso__alpha': np.float64(0.00039810717055349735)}
+
+20261019_190410 | lasso | Param tuned | neg_root_mean_squared_error
+-0.1109 ± 0.0063
+[-0.10807677 -0.10986139 -0.12070493 -0.11425557 -0.10181599]
+params: {'lasso__alpha': np.float64(0.00039810717055349735)}
+
+20261019_191132 | elasticnet | Param tuned | neg_root_mean_squared_error
+-0.1121 ± 0.0070
+[-0.11083556 -0.10942786 -0.12264785 -0.11594813 -0.10170923]
+params: {'elasticnet__alpha': np.float64(0.00039810717055349735), 'elasticnet__l1_ratio': np.float64(0.9)}
+
+20261019_191328 | elasticnet | Param tuned | neg_root_mean_squared_error
+-0.1121 ± 0.0070
+[-0.11083556 -0.10942786 -0.12264785 -0.11594813 -0.10170923]
+params: {'elasticnet__alpha': np.float64(0.00039810717055349735), 'elasticnet__l1_ratio': np.float64(0.9)}
+
+20261019_191843 | elasticnet | Param tuned | neg_root_mean_squared_error
+-0.1116 ± 0.0069
+[-0.10829657 -0.10972868 -0.12242012 -0.11544716 -0.10194   ]
+params: {'elasticnet__alpha': np.float64(0.001), 'elasticnet__l1_ratio': np.float64(0.5)}
+
+20261019_191952 | elasticnet | Param tuned | neg_root_mean_squared_error
+-0.1127 ± 0.0070
+[-0.11019429 -0.11049567 -0.12472423 -0.11466279 -0.10337255]
+params: {'elasticnet__alpha': np.float64(0.001), 'elasticnet__l1_ratio': np.float64(0.9)}
+
+20261019_192021 | elasticnet | Param tuned | neg_root_mean_squared_error
+-0.1127 ± 0.0070
+[-0.11019429 -0.11049567 -0.12472423 -0.11466279 -0.10337255]
+params: {'elasticnet__alpha': np.float64(0.001), 'elasticnet__l1_ratio': np.float64(0.9)}
+
