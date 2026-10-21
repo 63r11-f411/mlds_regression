@@ -6,6 +6,8 @@ from utility import load_best_params
 from .baseline import get_ridge_pipeline, PARAM_GRID as RIDGE_GRID
 from .lasso import get_lasso_pipeline, PARAM_GRID as LASSO_GRID
 from .elasticnet import get_elasticnet_pipeline, PARAM_GRID as ELASTICNET_GRID
+from .knn import get_knn_pipeline, PARAM_GRID as KNN_GRID
+from .decision_tree import get_tree_pipeline, PARAM_GRID as TREE_GRID
 
 @dataclass(frozen=True)
 class MLModelConf:
@@ -33,5 +35,7 @@ def build_model(name):
 MODELS = {
     'ridge': MLModelConf(get_ridge_pipeline, RIDGE_GRID),
     'lasso': MLModelConf(get_lasso_pipeline, LASSO_GRID),
-    'elasticnet': MLModelConf(get_elasticnet_pipeline, ELASTICNET_GRID)
+    'elasticnet': MLModelConf(get_elasticnet_pipeline, ELASTICNET_GRID),
+    'knn': MLModelConf(get_knn_pipeline, KNN_GRID),
+    'tree': MLModelConf(get_tree_pipeline, TREE_GRID),
 }

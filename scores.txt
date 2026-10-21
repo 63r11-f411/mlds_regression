@@ -93,3 +93,23 @@ params: {'elasticnet__alpha': np.float64(0.001), 'elasticnet__l1_ratio': np.floa
 [-0.11019429 -0.11049567 -0.12472423 -0.11466279 -0.10337255]
 params: {'elasticnet__alpha': np.float64(0.001), 'elasticnet__l1_ratio': np.float64(0.9)}
 
+20261019_203403 | knn | Param tuned | neg_root_mean_squared_error
+-0.1646 ± 0.0115
+[-0.1794036  -0.16755981 -0.15396048 -0.17319442 -0.14901189]
+params: {'knn__metric': 'manhattan', 'knn__n_neighbors': 5, 'knn__weights': 'distance'}
+
+20261019_205658 | knn | Param tuned | neg_root_mean_squared_error
+-0.1584 ± 0.0101
+[-0.169088   -0.16179162 -0.16154719 -0.16047662 -0.13910815]
+params: {'feature_selection__max_features': 20, 'knn__metric': 'manhattan', 'knn__n_neighbors': 7, 'knn__weights': 'distance'}
+
+20261019_210330 | knn | Param tuned | neg_root_mean_squared_error
+-0.1577 ± 0.0099
+[-0.15878104 -0.16866951 -0.16154719 -0.16047662 -0.13910815]
+params: {'feature_selection__max_features': 20, 'knn__metric': 'manhattan', 'knn__n_neighbors': 7, 'knn__weights': 'distance'}
+
+20261022_011134 | tree | Param tuned | neg_root_mean_squared_error
+-0.1870 ± 0.0078
+[-0.18477215 -0.19700995 -0.18839992 -0.19136572 -0.17355572]
+params: {'tree__ccp_alpha': 0.0, 'tree__max_depth': None, 'tree__min_samples_leaf': 10}
+

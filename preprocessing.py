@@ -2,7 +2,7 @@ import numpy as np
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer, make_column_selector
 from sklearn.impute import SimpleImputer
-from sklearn.preprocessing import OneHotEncoder, FunctionTransformer, StandardScaler
+from sklearn.preprocessing import OneHotEncoder, FunctionTransformer, StandardScaler, OrdinalEncoder
 from feature_engineering import process_ordinal_and_missing_features
 
 # скошенные вправо площади: log1p приближает распределение ненулевой части к симметричному
@@ -49,3 +49,29 @@ def build_scaled_preprocessor():
         ('preprocessor', preprocessor)
     ])
     return pipeline
+
+
+def build_unscaled_preprocessor():
+    '''
+    Препроцессор для деревьев: без масштабирования и логарифма (монотонные преобразования не меняют разбиения),
+    категории кодируются порядково вместо OHE, пропуски заполняются значением вне диапазона признака.
+    '''
+    cat_pipeline = Pipeline([
+        ('imputer', SimpleImputer(strategy='constant', fill_value='missing')),
+        ('ordinal', OrdinalEncoder(handle_unknown='use_encoded_value', unknown_value=-1))
+    ])
+
+    # -1 вне диапазона всех числовых признаков, поэтому дерево может отделить пропуски одним разбиением
+    num_imputer = SimpleImputer(strategy='constant', fill_value=-1)
+
+    preprocessor = ColumnTransformer([
+        ('cat', cat_pipeline, make_column_selector(dtype_include=str)),
+        ('num', num_imputer, make_column_selector(dtype_include=np.number))
+    ])
+
+    pipeline = Pipeline([
+        ('ordinal_and_missing', FunctionTransformer(process_ordinal_and_missing_features)),
+        ('preprocessor', preprocessor)
+    ])
+    return pipeline
+

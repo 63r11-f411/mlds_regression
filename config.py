@@ -14,7 +14,7 @@ DROP_TRAIN_OUTLIERS = True
 
 @dataclass(frozen=True)
 class RunConfig:
-    models: tuple[str, ...] = ('elasticnet',)
+    models: tuple[str, ...] = ('tree',)
     tune_hyperparameters: bool = True
     cross_validate: bool = True
     save_test_results: bool = True

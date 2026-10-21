@@ -1,0 +1,5 @@
+{
+  "tree__ccp_alpha": 0.0,
+  "tree__max_depth": null,
+  "tree__min_samples_leaf": 10
+}
