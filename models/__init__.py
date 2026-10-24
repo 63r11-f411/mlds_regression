@@ -1,6 +1,5 @@
 from collections.abc import Callable
 from dataclasses import dataclass, field
-from functools import partial
 from config import RUNCONF
 from utility import load_best_params
 from .baseline import get_ridge_pipeline, PARAM_GRID as RIDGE_GRID

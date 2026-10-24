@@ -1,6 +1,6 @@
 {
   "feature_selection__max_features": 20,
   "knn__metric": "manhattan",
-  "knn__n_neighbors": 7,
+  "knn__n_neighbors": 5,
   "knn__weights": "distance"
 }

@@ -1,7 +1,3 @@
-import numpy as np
-import pandas as pd
-from sklearn.base import BaseEstimator, TransformerMixin
-
 QUALITY = {
     'Ex': 5,
     'Gd': 4,
@@ -10,7 +6,7 @@ QUALITY = {
     'Po': 1
 }
 
-QUALITY_COLUMNS = ["ExterQual", "ExterCond", "BsmtQual", "BsmtCond", "HeatingQC", "KitchenQual", "FireplaceQu", "GarageQual", "GarageCond", "PoolQC"]
+QUALITY_COLUMNS = ["ExterQual", "ExterCond", "BsmtQual", "BsmtCond", "HeatingQC", "KitchenQual", "FireplaceQu", "GarageQual", "GarageCond"]
 
 ORDINAL_COLUMNS_OTHER = {"BsmtExposure": {"Gd": 4, "Av": 3, "Mn": 2, "No": 1},
 "BsmtFinType1": {"GLQ": 6, "ALQ": 5, "BLQ": 4, "Rec": 3, "LwQ": 2, "Unf": 1},
@@ -20,43 +16,39 @@ ORDINAL_COLUMNS_OTHER = {"BsmtExposure": {"Gd": 4, "Av": 3, "Mn": 2, "No": 1},
 "PavedDrive": {"Y": 3, "P": 2, "N": 1}
 }
 
-OBJECT_INDICATORS = {
-    'BsmtQual': ['BsmtCond', 'BsmtExposure', 'BsmtFinType1', 'BsmtFinSF1', 'BsmtFinType2', 'BsmtFinSF2', 'BsmtUnfSF', 'TotalBsmtSF', 'BsmtFullBath', 'BsmtHalfBath', 'BsmtQual'],
-    'GarageType': ['GarageCars', 'GarageArea', 'GarageQual', 'GarageCond', 'GarageFinish'],
-    'MasVnrType': ['MasVnrArea'],
-    'Fireplaces': ['FireplaceQu'],
-    'PoolArea': ['PoolQC']
-}
+DROP_COLUMNS = ['PoolQC', 'Utilities', 'GarageYrBlt'] # 7 бассейнов, почти константа, и обычно совпадает с YearBuilt
+
+ZERO_IF_MISSING_COLUMNS = ['MasVnrArea', 'BsmtFinSF1', 'BsmtFinSF2', 'BsmtUnfSF', 'TotalBsmtSF',
+                           'BsmtFullBath', 'BsmtHalfBath', 'GarageCars', 'GarageArea']
 
 
-def _add_ordinal_features(df):
+def engineer_features(df):
     '''
-    Преобразует качественные признаки в порядковые.
+    Преобразования признакой:
+        drop константных/неинформативных колонок
+        заполнение пропусков в Functional
+        преобразование ordinal колонок
+        NaN в площадаях и счётчиках означает отсутствие значения - заполняем нулями
+        приведение MSSubclass к строкам
     '''
     df = df.copy()
+
+    df = df.drop(DROP_COLUMNS, axis=1)
+
+    df['Functional'] = df['Functional'].fillna('Typ')
+
     for col in QUALITY_COLUMNS:
         df[col] = df[col].map(QUALITY)
     
     for col in ORDINAL_COLUMNS_OTHER:
         df[col] = df[col].map(ORDINAL_COLUMNS_OTHER[col])
-    
-    return df
 
+    df[QUALITY_COLUMNS] = df[QUALITY_COLUMNS].fillna(0)
+    df[list(ORDINAL_COLUMNS_OTHER.keys())] = df[list(ORDINAL_COLUMNS_OTHER.keys())].fillna(0)
 
-def _nullify_missing_objects(df):
-    '''
-    Явно приводит к нулю признаки отсутствующих объектов.
-    '''
-    df = df.copy()
-    
-    for col in OBJECT_INDICATORS:
-        mask = df[col].isna() | df[col].eq(0)
-        df.loc[mask, OBJECT_INDICATORS[col]] = df.loc[mask, OBJECT_INDICATORS[col]].fillna(0)
+    for col in ZERO_IF_MISSING_COLUMNS:
+        df[col] = df[col].fillna(0)
 
-    return df
+    df['MSSubClass'] = df['MSSubClass'].astype(str)
 
-
-def process_ordinal_and_missing_features(df):
-    df = _add_ordinal_features(df)
-    df = _nullify_missing_objects(df)
     return df

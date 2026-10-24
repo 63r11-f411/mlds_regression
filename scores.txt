@@ -113,3 +113,43 @@ params: {'feature_selection__max_features': 20, 'knn__metric': 'manhattan', 'knn
 [-0.18477215 -0.19700995 -0.18839992 -0.19136572 -0.17355572]
 params: {'tree__ccp_alpha': 0.0, 'tree__max_depth': None, 'tree__min_samples_leaf': 10}
 
+20261024_195507 | ridge | Param tuned | neg_root_mean_squared_error
+-0.1123 ± 0.0072
+[-0.11313025 -0.10954052 -0.1209174  -0.11766923 -0.10025613]
+params: {'ridge__alpha': np.float64(10.0)}
+
+20261024_202822 | ridge | Param tuned | neg_root_mean_squared_error
+-0.1124 ± 0.0074
+[-0.11334602 -0.10985526 -0.12065661 -0.11830599 -0.09958792]
+params: {'ridge__alpha': np.float64(10.0)}
+
+20261024_221919 | ridge | Param tuned | neg_root_mean_squared_error
+-0.1125 ± 0.0072
+[-0.1134803  -0.1102272  -0.12055778 -0.11819326 -0.10001413]
+params: {'ridge__alpha': np.float64(10.0)}
+
+20261024_223303 | ridge | Param tuned | neg_root_mean_squared_error
+-0.1125 ± 0.0072
+[-0.1134803  -0.1102272  -0.12055778 -0.11819326 -0.10001413]
+params: {'ridge__alpha': np.float64(10.0)}
+
+20261024_223307 | lasso | Param tuned | neg_root_mean_squared_error
+-0.1108 ± 0.0065
+[-0.10751976 -0.11078598 -0.12036051 -0.11435707 -0.10101581]
+params: {'lasso__alpha': np.float64(0.00039810717055349735)}
+
+20261024_223321 | elasticnet | Param tuned | neg_root_mean_squared_error
+-0.1116 ± 0.0070
+[-0.10808665 -0.11018757 -0.12218199 -0.11575999 -0.10165388]
+params: {'elasticnet__alpha': np.float64(0.001), 'elasticnet__l1_ratio': np.float64(0.5)}
+
+20261024_223438 | knn | Param tuned | neg_root_mean_squared_error
+-0.1602 ± 0.0119
+[-0.16645654 -0.17317638 -0.16126569 -0.16202262 -0.13789822]
+params: {'feature_selection__max_features': 20, 'knn__metric': 'manhattan', 'knn__n_neighbors': 5, 'knn__weights': 'distance'}
+
+20261024_223456 | tree | Param tuned | neg_root_mean_squared_error
+-0.1861 ± 0.0060
+[-0.18638734 -0.19552311 -0.18839992 -0.18223024 -0.17772136]
+params: {'tree__ccp_alpha': 0.0, 'tree__max_depth': None, 'tree__min_samples_leaf': 10}
+
