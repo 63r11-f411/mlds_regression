@@ -13,7 +13,9 @@ ORDINAL_COLUMNS_OTHER = {"BsmtExposure": {"Gd": 4, "Av": 3, "Mn": 2, "No": 1},
 "BsmtFinType2": {"GLQ": 6, "ALQ": 5, "BLQ": 4, "Rec": 3, "LwQ": 2, "Unf": 1},
 "GarageFinish": {"Fin": 3, "RFn": 2, "Unf": 1},
 "Functional": {"Typ": 8, "Min1": 7, "Min2": 6, "Mod": 5, "Maj1": 4, "Maj2": 3, "Sev": 2, "Sal": 1},
-"PavedDrive": {"Y": 3, "P": 2, "N": 1}
+"PavedDrive": {"Y": 3, "P": 2, "N": 1},
+"LotShape": {"Reg": 4, "IR1": 3, "IR2": 2, "IR3": 1},
+"LandSlope": {"Gtl": 3, "Mod": 2, "Sev": 1}
 }
 
 DROP_COLUMNS = ['PoolQC', 'Utilities', 'GarageYrBlt'] # 7 бассейнов, почти константа, и обычно совпадает с YearBuilt
