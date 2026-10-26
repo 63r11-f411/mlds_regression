@@ -12,3 +12,6 @@ wheels/
 # Data and generated outputs
 ds/
 submission/
+
+# CatBoost training logs
+catboost_info/
