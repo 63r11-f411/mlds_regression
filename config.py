@@ -14,7 +14,7 @@ DROP_TRAIN_OUTLIERS = True
 
 @dataclass(frozen=True)
 class RunConfig:
-    models: tuple[str, ...] = ('catboost',)
+    models: tuple[str, ...] = ('nn',)
     tune_hyperparameters: bool = False
     cross_validate: bool = True
     save_test_results: bool = False

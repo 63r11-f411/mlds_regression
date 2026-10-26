@@ -248,3 +248,23 @@ params: {'catboost__depth': 5, 'catboost__iterations': 2455, 'catboost__l2_leaf_
 [-0.11661998 -0.11175918 -0.11877575 -0.12191283 -0.10112061]
 params: {'catboost__depth': 5, 'catboost__iterations': 2800, 'catboost__l2_leaf_reg': 0.7309539835912913, 'catboost__learning_rate': 0.05}
 
+20261026_172843 | nn | No param tuning | neg_root_mean_squared_error
+-0.1472 ± 0.0159
+[-0.13155834 -0.16431136 -0.14541866 -0.16629079 -0.12841684]
+
+20261026_185253 | nn | No param tuning | neg_root_mean_squared_error
+-0.1472 ± 0.0159
+[-0.13155834 -0.16431136 -0.14541866 -0.16629079 -0.12841684]
+
+20261026_185505 | nn | No param tuning | neg_root_mean_squared_error
+-0.1472 ± 0.0159
+[-0.13155834 -0.16431136 -0.14541866 -0.16629079 -0.12841684]
+
+20261026_194328 | nn | No param tuning | neg_root_mean_squared_error
+-0.1472 ± 0.0159
+[-0.13155834 -0.16431136 -0.14541866 -0.16629079 -0.12841684]
+
+20261026_201150 | nn | No param tuning | neg_root_mean_squared_error
+-0.1375 ± 0.0069
+[-0.13867032 -0.14719383 -0.13371625 -0.141241   -0.12689314]
+
