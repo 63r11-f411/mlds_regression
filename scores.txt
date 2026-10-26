@@ -153,3 +153,83 @@ params: {'feature_selection__max_features': 20, 'knn__metric': 'manhattan', 'knn
 [-0.18638734 -0.19552311 -0.18839992 -0.18223024 -0.17772136]
 params: {'tree__ccp_alpha': 0.0, 'tree__max_depth': None, 'tree__min_samples_leaf': 10}
 
+20261025_134822 | xgb | Param tuned | neg_root_mean_squared_error
+-0.1203 ± 0.0072
+[-0.12074098 -0.11809218 -0.12777365 -0.12711565 -0.10793072]
+params: {'xgb__learning_rate': np.float64(0.08960785365368121), 'xgb__max_depth': 3, 'xgb__n_estimators': 300}
+
+20261025_140507 | xgb | Param tuned | neg_root_mean_squared_error
+-0.1198 ± 0.0077
+[-0.1181354  -0.11608246 -0.12620647 -0.13017323 -0.10845744]
+params: {'xgb__colsample_bytree': 0.9, 'xgb__gamma': 0, 'xgb__learning_rate': np.float64(0.0840608420892158), 'xgb__max_depth': 2, 'xgb__min_child_weight': 2, 'xgb__n_estimators': 300, 'xgb__reg_alpha': 0.5, 'xgb__reg_lambda': 0.5, 'xgb__subsample': 1.0}
+
+20261025_144617 | xgb | Param tuned | neg_root_mean_squared_error
+-0.1137 ± 0.0072
+[-0.11363992 -0.11158619 -0.1231372  -0.11853858 -0.10163403]
+params: {'xgb__colsample_bytree': np.float64(0.47281324398702085), 'xgb__max_depth': 2, 'xgb__min_child_weight': 3, 'xgb__n_estimators': 1936, 'xgb__reg_lambda': np.float64(0.37126241790405323), 'xgb__subsample': np.float64(0.5184434736772664)}
+
+20261025_151714 | ridge | Param tuned | neg_root_mean_squared_error
+-0.1119 ± 0.0072
+[-0.11274266 -0.10984964 -0.11946626 -0.11831117 -0.09927177]
+params: {'ridge__alpha': np.float64(10.0)}
+
+20261025_151718 | lasso | Param tuned | neg_root_mean_squared_error
+-0.1102 ± 0.0064
+[-0.10689794 -0.11003622 -0.11920915 -0.11420916 -0.10044094]
+params: {'lasso__alpha': np.float64(0.00039810717055349735)}
+
+20261025_151735 | elasticnet | Param tuned | neg_root_mean_squared_error
+-0.1112 ± 0.0069
+[-0.10799746 -0.10950903 -0.12023284 -0.11725077 -0.10100393]
+params: {'elasticnet__alpha': np.float64(0.001), 'elasticnet__l1_ratio': np.float64(0.5)}
+
+20261025_151906 | knn | Param tuned | neg_root_mean_squared_error
+-0.1478 ± 0.0103
+[-0.16252128 -0.14564551 -0.14528592 -0.15390337 -0.13142827]
+params: {'feature_selection__max_features': 20, 'knn__metric': 'manhattan', 'knn__n_neighbors': 7, 'knn__weights': 'distance'}
+
+20261025_151924 | tree | Param tuned | neg_root_mean_squared_error
+-0.1773 ± 0.0075
+[-0.17711759 -0.18367669 -0.1846836  -0.17743273 -0.16369228]
+params: {'tree__ccp_alpha': 0.0, 'tree__max_depth': 8, 'tree__min_samples_leaf': 5}
+
+20261025_152650 | xgb | Param tuned | neg_root_mean_squared_error
+-0.1166 ± 0.0066
+[-0.11720435 -0.11550971 -0.12146592 -0.12389143 -0.10479432]
+params: {'xgb__colsample_bytree': np.float64(0.42939811886786894), 'xgb__max_depth': 2, 'xgb__min_child_weight': 2, 'xgb__n_estimators': 1879, 'xgb__reg_lambda': np.float64(7.56829206016762), 'xgb__subsample': np.float64(0.9474136752138245)}
+
+20261025_160908 | xgb | No param tuning | neg_root_mean_squared_error
+-0.1148 ± 0.0077
+[-0.11397284 -0.10940234 -0.12294374 -0.12389143 -0.10383387]
+params: {'xgb__colsample_bytree': 0.42939811886786894, 'xgb__max_depth': 2, 'xgb__min_child_weight': 2, 'xgb__n_estimators': 1879, 'xgb__reg_lambda': 7.56829206016762, 'xgb__subsample': 0.9474136752138245, 'xgb__learning_rate': 0.05}
+
+20261025_161000 | xgb | No param tuning | neg_root_mean_squared_error
+-0.1152 ± 0.0075
+[-0.11673085 -0.11158619 -0.1231372  -0.12196047 -0.1025238 ]
+params: {'xgb__colsample_bytree': 0.42939811886786894, 'xgb__max_depth': 2, 'xgb__min_child_weight': 2, 'xgb__n_estimators': 1879, 'xgb__reg_lambda': 7.56829206016762, 'xgb__subsample': 0.9474136752138245, 'xgb__learning_rate': 0.05}
+
+20261025_191831 | ridge | No param tuning | neg_root_mean_squared_error
+-0.1176 ± 0.0066
+[-0.11401828 -0.12138549 -0.12298137 -0.1234414  -0.10631422]
+
+20261025_191832 | lasso | No param tuning | neg_root_mean_squared_error
+-0.3993 ± 0.0168
+[-0.41059337 -0.3887795  -0.38084997 -0.42653632 -0.38966538]
+
+20261025_191833 | elasticnet | No param tuning | neg_root_mean_squared_error
+-0.3993 ± 0.0168
+[-0.41059337 -0.3887795  -0.38084997 -0.42653632 -0.38966538]
+
+20261025_191834 | knn | No param tuning | neg_root_mean_squared_error
+-0.1806 ± 0.0098
+[-0.19000715 -0.18938102 -0.16807487 -0.1861836  -0.169137  ]
+
+20261025_191834 | tree | No param tuning | neg_root_mean_squared_error
+-0.2019 ± 0.0106
+[-0.19857163 -0.21516804 -0.19533782 -0.21299503 -0.18744588]
+
+20261025_191836 | xgb | No param tuning | neg_root_mean_squared_error
+-0.1351 ± 0.0114
+[-0.14142462 -0.12418011 -0.14821358 -0.14272678 -0.11909539]
+params: {'xgb__learning_rate': 0.05}
+

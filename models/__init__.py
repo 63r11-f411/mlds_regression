@@ -7,6 +7,7 @@ from .lasso import get_lasso_pipeline, PARAM_GRID as LASSO_GRID
 from .elasticnet import get_elasticnet_pipeline, PARAM_GRID as ELASTICNET_GRID
 from .knn import get_knn_pipeline, PARAM_GRID as KNN_GRID
 from .decision_tree import get_tree_pipeline, PARAM_GRID as TREE_GRID
+from .gb_xgb import get_xgb_pipeline, PARAM_GRID as XGB_GRID
 
 @dataclass(frozen=True)
 class MLModelConf:
@@ -37,4 +38,7 @@ MODELS = {
     'elasticnet': MLModelConf(get_elasticnet_pipeline, ELASTICNET_GRID),
     'knn': MLModelConf(get_knn_pipeline, KNN_GRID),
     'tree': MLModelConf(get_tree_pipeline, TREE_GRID),
+    'xgb': MLModelConf(get_xgb_pipeline, XGB_GRID,
+                       model_params={'xgb__learning_rate': 0.05},
+                       search_params={'n_jobs': 1, 'n_iter': 30}),
 }
