@@ -233,3 +233,18 @@ params: {'xgb__colsample_bytree': 0.42939811886786894, 'xgb__max_depth': 2, 'xgb
 [-0.14142462 -0.12418011 -0.14821358 -0.14272678 -0.11909539]
 params: {'xgb__learning_rate': 0.05}
 
+20261025_232405 | catboost | Param tuned | neg_root_mean_squared_error
+-0.1211 ± 0.0101
+[-0.12641377 -0.11486429 -0.12465228 -0.13440995 -0.10512177]
+params: {'catboost__depth': 6, 'catboost__iterations': 600, 'catboost__l2_leaf_reg': 3, 'catboost__learning_rate': np.float64(0.017240892195821537)}
+
+20261026_000903 | catboost | No param tuning | neg_root_mean_squared_error
+-0.1136 ± 0.0074
+[-0.1146438  -0.10921363 -0.11770409 -0.12402456 -0.10238413]
+params: {'catboost__depth': 5, 'catboost__iterations': 2455, 'catboost__l2_leaf_reg': 1.5213743426653703, 'catboost__learning_rate': 0.05}
+
+20261026_004847 | catboost | No param tuning | neg_root_mean_squared_error
+-0.1140 ± 0.0073
+[-0.11661998 -0.11175918 -0.11877575 -0.12191283 -0.10112061]
+params: {'catboost__depth': 5, 'catboost__iterations': 2800, 'catboost__l2_leaf_reg': 0.7309539835912913, 'catboost__learning_rate': 0.05}
+

@@ -13,6 +13,11 @@ LOG_COLUMNS = ['LotArea', 'GrLivArea', '1stFlrSF', 'TotalBsmtSF', 'OpenPorchSF',
 PRESENCE_FLAG_COLUMNS = ['2ndFlrSF', 'MasVnrArea', 'OpenPorchSF', 'WoodDeckSF', 'BsmtFinSF1', 'TotalBsmtSF',
                          'PoolArea', 'MiscVal', '3SsnPorch', 'LowQualFinSF', 'ScreenPorch', 'BsmtFinSF2', 'EnclosedPorch', 'GarageArea', 'Fireplaces']
 
+NATIVE_CATEGORICAL_FEATURES = ["MSSubClass", "MSZoning", "Street", "Alley", "LandContour", "LotConfig",
+"Neighborhood", "Condition1", "Condition2", "BldgType", "HouseStyle", "RoofStyle", "RoofMatl",
+"Exterior1st", "Exterior2nd", "MasVnrType", "Foundation", "Heating", "CentralAir", "Electrical",
+"GarageType", "Fence", "MiscFeature", "SaleType", "SaleCondition"
+]
 
 def add_log_and_presence_flags(df):
     '''
@@ -24,6 +29,7 @@ def add_log_and_presence_flags(df):
         df[f'Has{col}'] = (df[col] > 0).astype(int)
 
     df[LOG_COLUMNS] = np.log1p(df[LOG_COLUMNS])
+
     return df
 
 
@@ -75,3 +81,18 @@ def build_unscaled_preprocessor():
     ])
     return pipeline
 
+
+def fill_and_mark_categories(df):
+    '''NaN в категориях -> 'missing', тип category (нужен XGBoost, CatBoost принимает тоже)'''
+    df = df.copy()
+    df[NATIVE_CATEGORICAL_FEATURES] = (
+        df[NATIVE_CATEGORICAL_FEATURES].fillna('missing').astype('category')
+    )
+    return df
+
+
+def build_native_categorical_preprocessor():
+    return Pipeline([
+        ('fe', FunctionTransformer(engineer_features)),
+        ('categories', FunctionTransformer(fill_and_mark_categories)),
+    ])

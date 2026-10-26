@@ -1,0 +1,5 @@
+{
+  "catboost__depth": 5,
+  "catboost__iterations": 2800,
+  "catboost__l2_leaf_reg": 0.7309539835912913
+}

@@ -8,6 +8,7 @@ from .elasticnet import get_elasticnet_pipeline, PARAM_GRID as ELASTICNET_GRID
 from .knn import get_knn_pipeline, PARAM_GRID as KNN_GRID
 from .decision_tree import get_tree_pipeline, PARAM_GRID as TREE_GRID
 from .gb_xgb import get_xgb_pipeline, PARAM_GRID as XGB_GRID
+from .gb_catboost import get_catboost_pipeline, PARAM_GRID as CATBOOST_GRID
 
 @dataclass(frozen=True)
 class MLModelConf:
@@ -41,4 +42,7 @@ MODELS = {
     'xgb': MLModelConf(get_xgb_pipeline, XGB_GRID,
                        model_params={'xgb__learning_rate': 0.05},
                        search_params={'n_jobs': 1, 'n_iter': 30}),
+    'catboost': MLModelConf(get_catboost_pipeline, CATBOOST_GRID,
+                            model_params={'catboost__learning_rate': 0.05},
+                            search_params={'n_jobs': 1, 'n_iter': 30}),
 }

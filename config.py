@@ -14,10 +14,10 @@ DROP_TRAIN_OUTLIERS = True
 
 @dataclass(frozen=True)
 class RunConfig:
-    models: tuple[str, ...] = ('ridge', 'lasso', 'elasticnet', 'knn', 'tree')
-    tune_hyperparameters: bool = True
+    models: tuple[str, ...] = ('catboost',)
+    tune_hyperparameters: bool = False
     cross_validate: bool = True
-    save_test_results: bool = True
+    save_test_results: bool = False
     use_saved_params: bool = True
     voting_members: tuple[str, ...] = ()
 
