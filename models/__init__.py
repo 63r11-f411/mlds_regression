@@ -57,5 +57,5 @@ MODELS = {
                                     'nn__epochs': 50},
                       search_params={'n_iter': 40}),
     'voting': MLModelConf(partial(get_voting_regressor, build_model, RUNCONF.ensemble_members), search_params={'n_jobs': 1}),
-    'stacking': MLModelConf(partial(get_stacking_regressor, build_model, RUNCONF.ensemble_members), search_params={'n_jobs': 1}),
+    'stacking': MLModelConf(partial(get_stacking_regressor, build_model, RUNCONF.ensemble_members, meta_model='linear'), search_params={'n_jobs': 1}),
 }

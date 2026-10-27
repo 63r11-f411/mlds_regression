@@ -37,7 +37,7 @@ def engineer_features(df):
 
     df = df.drop(DROP_COLUMNS, axis=1)
 
-    df['Functional'] = df['Functional'].fillna('Typ')
+    df['Functional'] = df['Functional'].fillna('Typ') # based on data_description
 
     for col in QUALITY_COLUMNS:
         df[col] = df[col].map(QUALITY)

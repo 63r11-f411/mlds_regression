@@ -13,10 +13,10 @@ PARAM_GRID = {
     'xgb__reg_lambda': loguniform(0.1, 10),
 }
 
-def get_xgb_pipeline(preprocessor=None, max_depth=7, **xgb_params):
+def get_xgb_pipeline(preprocessor=None, **xgb_params):
     if preprocessor is None:
         preprocessor = build_unscaled_preprocessor()
     return Pipeline([
         ('preprocessing', preprocessor),
-        ('xgb', XGBRegressor(random_state=RANDOM_STATE, max_depth=max_depth, **xgb_params))
+        ('xgb', XGBRegressor(random_state=RANDOM_STATE, **xgb_params))
     ])

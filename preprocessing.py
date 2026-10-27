@@ -34,6 +34,7 @@ def add_log_and_presence_flags(df):
 
 
 def build_scaled_preprocessor():
+    '''препроцессор для моделей, требующих масштабирования'''
     cat_pipeline = Pipeline([
         ('imputer', SimpleImputer(strategy='constant', fill_value='missing')),
         ('ohe', OneHotEncoder(handle_unknown='ignore'))
@@ -92,6 +93,7 @@ def fill_and_mark_categories(df):
 
 
 def build_native_categorical_preprocessor():
+    '''препроцессор для моделей, работающих с нативными категориальными признаками (catboost)'''
     return Pipeline([
         ('fe', FunctionTransformer(engineer_features)),
         ('categories', FunctionTransformer(fill_and_mark_categories)),

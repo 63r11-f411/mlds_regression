@@ -11,6 +11,9 @@ PARAM_GRID = {
 }
 
 def get_catboost_pipeline(preprocessor=None):
+    '''
+    Создает пайплайн для CatBoost регрессора с предварительной обработкой данных. Использует нативные категории
+    '''
     if preprocessor is None:
         preprocessor = build_native_categorical_preprocessor()
     return Pipeline([

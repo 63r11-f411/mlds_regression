@@ -12,9 +12,12 @@ PARAM_GRID = {
     'feature_selection__max_features': [5, 10, 15, 20]
 }
 
-ALPHA = 0.0004  #около оптимальное значение из модели лассо
+ALPHA = 0.0004  # около оптимальное значение из модели лассо
 
 def get_knn_pipeline(preprocessor=None):
+    '''
+    Создает пайплайн для KNN регрессора с предварительной обработкой данных и отбором признаков (Lasso).
+    '''
     if preprocessor is None:
         preprocessor = build_scaled_preprocessor()
     return Pipeline([

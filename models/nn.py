@@ -79,6 +79,7 @@ class MLRegressor(RegressorMixin, BaseEstimator):
     def fit(self, X, y):
         torch.manual_seed(RANDOM_STATE)
 
+        # y - скейлиться, т.к. первую итерацию модель тратила на подгон весов под среднее значение
         y = np.asarray(y)
         self.y_mean_ = y.mean()
         self.y_std_ = y.std()
