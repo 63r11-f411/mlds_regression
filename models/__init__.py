@@ -51,5 +51,6 @@ MODELS = {
                                     'nn__activation': 'leaky_relu',
                                     'nn__optimizer': 'sgd',
                                     'nn__lr': 0.001,
-                                    'nn__epochs': 50}),
+                                    'nn__epochs': 50},
+                      search_params={'n_iter': 40}),
 }

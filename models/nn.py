@@ -7,14 +7,31 @@ from torch.utils.data import DataLoader, TensorDataset
 from config import RANDOM_STATE
 from sklearn.pipeline import Pipeline
 from preprocessing import build_scaled_preprocessor
-from scipy.stats import loguniform
+from scipy.stats import loguniform, randint, uniform
 
-PARAM_GRID = {
-    'nn__hidden_sizes': [(32,), (64,), (64, 32), (128, 64)],
-    'nn__dropout': [0.0, 0.1, 0.3],
-    'nn__weight_decay': loguniform(1e-5, 1e-1),
-    'nn__lr': loguniform(1e-4, 1e-2),
-}
+# две ветки по итогам ручной серии: SGD регуляризуется числом эпох, Adam - BatchNorm и dropout на широких слоях
+PARAM_GRID = [
+    {
+        'nn__optimizer': ['sgd'],
+        'nn__hidden_sizes': [(50, 25), (100, 50), (200, 100), (100, 50, 25)],
+        'nn__activation': ['relu', 'leaky_relu', 'gelu'],
+        'nn__lr': loguniform(3e-4, 3e-3),
+        'nn__epochs': randint(30, 120),
+        'nn__scheduler': [None, 'cosine'],
+        'nn__batch_size': [16, 32, 64],
+    },
+    {
+        'nn__optimizer': ['adam'],
+        'nn__hidden_sizes': [(150, 150), (200, 150), (300, 200)],
+        'nn__activation': ['relu', 'leaky_relu', 'gelu'],
+        'nn__batchnorm': [True],
+        'nn__dropout': uniform(0.4, 0.4),  # [0.4, 0.8]
+        'nn__lr': loguniform(3e-4, 3e-3),
+        'nn__epochs': randint(50, 200),
+        'nn__scheduler': [None, 'cosine'],
+        'nn__batch_size': [16, 32, 64],
+    },
+]
 
 # параметры задаются строками, чтобы их можно было сохранить в json и прочитать в логе
 ACTIVATIONS = {'relu': nn.ReLU, 'leaky_relu': nn.LeakyReLU, 'gelu': nn.GELU, 'tanh': nn.Tanh}
