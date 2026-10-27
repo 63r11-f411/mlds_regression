@@ -15,3 +15,6 @@ submission/
 
 # CatBoost training logs
 catboost_info/
+
+# Local score log written by main.py
+scores.txt
