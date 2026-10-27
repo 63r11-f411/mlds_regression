@@ -268,3 +268,321 @@ params: {'catboost__depth': 5, 'catboost__iterations': 2800, 'catboost__l2_leaf_
 -0.1375 ± 0.0069
 [-0.13867032 -0.14719383 -0.13371625 -0.141241   -0.12689314]
 
+20261027_000831 | nn | No param tuning | neg_root_mean_squared_error
+-0.1375 ± 0.0069
+[-0.13867032 -0.14719383 -0.13371625 -0.141241   -0.12689314]
+
+20261027_001313 | nn | No param tuning | neg_root_mean_squared_error
+-0.1268 ± 0.0095
+[-0.13065614 -0.12593051 -0.13214987 -0.13634906 -0.1091318 ]
+params: {'nn__hidden_sizes': (100, 50)}
+
+20261027_001357 | nn | No param tuning | neg_root_mean_squared_error
+-0.1375 ± 0.0069
+[-0.13867032 -0.14719383 -0.13371625 -0.141241   -0.12689314]
+
+20261027_001530 | nn | No param tuning | neg_root_mean_squared_error
+-0.1268 ± 0.0095
+[-0.13065614 -0.12593051 -0.13214987 -0.13634906 -0.1091318 ]
+params: {'nn__hidden_sizes': (100, 50)}
+
+20261027_001625 | nn | No param tuning | neg_root_mean_squared_error
+-0.1302 ± 0.0107
+[-0.12995969 -0.13750056 -0.13359631 -0.14021391 -0.10997262]
+params: {'nn__hidden_sizes': (100, 100, 50)}
+
+20261027_001656 | nn | No param tuning | neg_root_mean_squared_error
+-0.1263 ± 0.0088
+[-0.12660442 -0.1284769  -0.13455622 -0.13233631 -0.10956793]
+params: {'nn__hidden_sizes': (100, 50, 25)}
+
+20261027_001721 | nn | No param tuning | neg_root_mean_squared_error
+-0.1292 ± 0.0082
+[-0.12498165 -0.13075999 -0.1345486  -0.13962124 -0.11588542]
+params: {'nn__hidden_sizes': (75, 50, 25)}
+
+20261027_001744 | nn | No param tuning | neg_root_mean_squared_error
+-0.1263 ± 0.0088
+[-0.12660442 -0.1284769  -0.13455622 -0.13233631 -0.10956793]
+params: {'nn__hidden_sizes': (100, 50, 25)}
+
+20261027_002041 | nn | No param tuning | neg_root_mean_squared_error
+-0.1272 ± 0.0103
+[-0.12924167 -0.13002684 -0.13156147 -0.13782361 -0.10742034]
+params: {'nn__hidden_sizes': (100, 100)}
+
+20261027_002115 | nn | No param tuning | neg_root_mean_squared_error
+-0.1315 ± 0.0103
+[-0.13281266 -0.12565257 -0.14017576 -0.14380948 -0.11528934]
+params: {'nn__hidden_sizes': (50, 100, 50)}
+
+20261027_002141 | nn | No param tuning | neg_root_mean_squared_error
+-0.1309 ± 0.0090
+[-0.12841015 -0.13384421 -0.13682322 -0.14058154 -0.11475551]
+params: {'nn__hidden_sizes': (100,)}
+
+20261027_002357 | nn | No param tuning | neg_root_mean_squared_error
+-0.1319 ± 0.0130
+[-0.14144288 -0.1349779  -0.13266831 -0.14338988 -0.1072202 ]
+params: {'nn__hidden_sizes': (100, 50), 'nn__batchnorm': True}
+
+20261027_002428 | nn | No param tuning | neg_root_mean_squared_error
+-0.1314 ± 0.0099
+[-0.13435035 -0.13559753 -0.12877827 -0.14415514 -0.11426428]
+params: {'nn__hidden_sizes': (100, 50, 25), 'nn__batchnorm': True}
+
+20261027_002501 | nn | No param tuning | neg_root_mean_squared_error
+-0.1314 ± 0.0082
+[-0.13111141 -0.1400391  -0.13075792 -0.13834124 -0.11682335]
+params: {'nn__hidden_sizes': (128, 64), 'nn__batchnorm': True}
+
+20261027_002518 | nn | No param tuning | neg_root_mean_squared_error
+-0.1335 ± 0.0122
+[-0.13523316 -0.13962983 -0.13278693 -0.14840507 -0.11167937]
+params: {'nn__hidden_sizes': (128, 64, 32), 'nn__batchnorm': True}
+
+20261027_002531 | nn | No param tuning | neg_root_mean_squared_error
+-0.1309 ± 0.0135
+[-0.13444293 -0.13455068 -0.13429467 -0.14601974 -0.10543415]
+params: {'nn__hidden_sizes': (64, 32), 'nn__batchnorm': True}
+
+20261027_115611 | nn | No param tuning | neg_root_mean_squared_error
+-0.1274 ± 0.0101
+[-0.13369971 -0.12789307 -0.1297334  -0.13735879 -0.10841362]
+params: {'nn__hidden_sizes': (100, 50), 'nn__batchnorm': False, 'nn__dropout': 0.2}
+
+20261027_115704 | nn | No param tuning | neg_root_mean_squared_error
+-0.1273 ± 0.0076
+[-0.13649954 -0.12666647 -0.12606934 -0.13299862 -0.11422544]
+params: {'nn__hidden_sizes': (100, 50), 'nn__batchnorm': False, 'nn__dropout': 0.5}
+
+20261027_115735 | nn | No param tuning | neg_root_mean_squared_error
+-0.1780 ± 0.0062
+[-0.17172293 -0.18239106 -0.17328573 -0.18791299 -0.17478817]
+params: {'nn__hidden_sizes': (100, 75, 50, 25), 'nn__batchnorm': True, 'nn__dropout': 0.7}
+
+20261027_115754 | nn | No param tuning | neg_root_mean_squared_error
+-0.1276 ± 0.0060
+[-0.12784701 -0.12554017 -0.13458362 -0.13254106 -0.11754158]
+params: {'nn__hidden_sizes': (100, 50), 'nn__batchnorm': True, 'nn__dropout': 0.7}
+
+20261027_115913 | nn | No param tuning | neg_root_mean_squared_error
+-0.1222 ± 0.0077
+[-0.13190905 -0.1222891  -0.12250535 -0.12607534 -0.10846589]
+params: {'nn__hidden_sizes': (200, 100), 'nn__batchnorm': True, 'nn__dropout': 0.7}
+
+20261027_120207 | nn | No param tuning | neg_root_mean_squared_error
+-0.1311 ± 0.0116
+[-0.12958667 -0.14314294 -0.12941701 -0.14228681 -0.1111244 ]
+params: {'nn__hidden_sizes': (200, 100), 'nn__batchnorm': True}
+
+20261027_120229 | nn | No param tuning | neg_root_mean_squared_error
+-0.1336 ± 0.0048
+[-0.13960443 -0.13636815 -0.13375018 -0.13321151 -0.12521644]
+params: {'nn__hidden_sizes': (200, 50), 'nn__batchnorm': True, 'nn__dropout': 0.7}
+
+20261027_120255 | nn | No param tuning | neg_root_mean_squared_error
+-0.1229 ± 0.0099
+[-0.12658124 -0.121856   -0.13057787 -0.13136939 -0.10422674]
+params: {'nn__hidden_sizes': (300, 100), 'nn__batchnorm': True, 'nn__dropout': 0.7}
+
+20261027_120334 | nn | No param tuning | neg_root_mean_squared_error
+-0.1221 ± 0.0080
+[-0.13217656 -0.1238917  -0.12339061 -0.12336767 -0.10750597]
+params: {'nn__hidden_sizes': (200, 200), 'nn__batchnorm': True, 'nn__dropout': 0.7}
+
+20261027_120402 | nn | No param tuning | neg_root_mean_squared_error
+-0.1224 ± 0.0082
+[-0.12956563 -0.1185327  -0.12536922 -0.13029678 -0.10841822]
+params: {'nn__hidden_sizes': (150, 150), 'nn__batchnorm': True, 'nn__dropout': 0.7}
+
+20261027_120420 | nn | No param tuning | neg_root_mean_squared_error
+-0.1211 ± 0.0077
+[-0.12545761 -0.11645699 -0.12565545 -0.12969299 -0.1084503 ]
+params: {'nn__hidden_sizes': (200, 150), 'nn__batchnorm': True, 'nn__dropout': 0.7}
+
+20261027_120458 | nn | No param tuning | neg_root_mean_squared_error
+-0.1268 ± 0.0103
+[-0.13495092 -0.12750815 -0.13132663 -0.13350204 -0.10686144]
+params: {'nn__hidden_sizes': (200, 150), 'nn__batchnorm': False, 'nn__dropout': 0.7}
+
+20261027_120517 | nn | No param tuning | neg_root_mean_squared_error
+-0.1282 ± 0.0041
+[-0.13499868 -0.12624289 -0.12465063 -0.13072227 -0.12414969]
+params: {'nn__hidden_sizes': (100, 50), 'nn__batchnorm': False, 'nn__dropout': 0.7}
+
+20261027_120533 | nn | No param tuning | neg_root_mean_squared_error
+-0.1242 ± 0.0081
+[-0.12369494 -0.12372358 -0.12974985 -0.13387195 -0.10983036]
+params: {'nn__hidden_sizes': (200, 100), 'nn__batchnorm': False, 'nn__dropout': 0.7}
+
+20261027_120550 | nn | No param tuning | neg_root_mean_squared_error
+-0.1659 ± 0.0063
+[-0.17442442 -0.1599564  -0.16675217 -0.17047643 -0.15768188]
+params: {'nn__hidden_sizes': (200, 100), 'nn__batchnorm': False, 'nn__dropout': 0.9}
+
+20261027_120609 | nn | No param tuning | neg_root_mean_squared_error
+-0.1746 ± 0.0138
+[-0.19890778 -0.17131775 -0.15728442 -0.17777415 -0.16795492]
+params: {'nn__hidden_sizes': (200, 150), 'nn__batchnorm': False, 'nn__dropout': 0.9}
+
+20261027_120625 | nn | No param tuning | neg_root_mean_squared_error
+-0.1375 ± 0.0089
+[-0.14596844 -0.13355033 -0.13795578 -0.14705787 -0.12277656]
+params: {'nn__hidden_sizes': (200, 150), 'nn__batchnorm': True, 'nn__dropout': 0.9}
+
+20261027_120644 | nn | No param tuning | neg_root_mean_squared_error
+-0.1229 ± 0.0106
+[-0.12800775 -0.12167109 -0.12661383 -0.13475135 -0.10341954]
+params: {'nn__hidden_sizes': (200, 150), 'nn__batchnorm': True, 'nn__dropout': 0.5}
+
+20261027_120700 | nn | No param tuning | neg_root_mean_squared_error
+-0.1211 ± 0.0077
+[-0.12545761 -0.11645699 -0.12565545 -0.12969299 -0.1084503 ]
+params: {'nn__hidden_sizes': (200, 150), 'nn__batchnorm': True, 'nn__dropout': 0.7}
+
+20261027_120736 | nn | No param tuning | neg_root_mean_squared_error
+-0.1219 ± 0.0100
+[-0.12628185 -0.11972684 -0.12455368 -0.1344853  -0.10423727]
+params: {'nn__hidden_sizes': (200, 150), 'nn__batchnorm': True, 'nn__dropout': 0.6}
+
+20261027_121200 | nn | No param tuning | neg_root_mean_squared_error
+-0.1207 ± 0.0083
+[-0.1254478  -0.11671535 -0.125724   -0.12913831 -0.10630297]
+params: {'nn__hidden_sizes': (200, 150), 'nn__batchnorm': True, 'nn__dropout': 0.7, 'nn__activation': 'leaky_relu'}
+
+20261027_121219 | nn | No param tuning | neg_root_mean_squared_error
+-0.1220 ± 0.0076
+[-0.12385885 -0.12029295 -0.1243042  -0.13260463 -0.10914518]
+params: {'nn__hidden_sizes': (200, 150), 'nn__batchnorm': True, 'nn__dropout': 0.7, 'nn__activation': 'gelu'}
+
+20261027_121310 | nn | No param tuning | neg_root_mean_squared_error
+-0.1309 ± 0.0094
+[-0.13328933 -0.13179002 -0.12861065 -0.14506005 -0.11570107]
+params: {'nn__hidden_sizes': (200, 150), 'nn__batchnorm': True, 'nn__dropout': 0.7, 'nn__activation': 'tanh'}
+
+20261027_121706 | nn | No param tuning | neg_root_mean_squared_error
+-0.1209 ± 0.0076
+[-0.12494742 -0.11667034 -0.12530805 -0.12948786 -0.10817401]
+params: {'nn__hidden_sizes': (200, 150), 'nn__batchnorm': True, 'nn__dropout': 0.7, 'nn__activation': 'leaky_relu', 'nn__optimizer': 'adamw', 'nn__weight_decay': 0.01}
+
+20261027_121730 | nn | No param tuning | neg_root_mean_squared_error
+-0.1207 ± 0.0083
+[-0.1254478  -0.11671535 -0.125724   -0.12913831 -0.10630297]
+params: {'nn__hidden_sizes': (200, 150), 'nn__batchnorm': True, 'nn__dropout': 0.7, 'nn__activation': 'leaky_relu'}
+
+20261027_121750 | nn | No param tuning | neg_root_mean_squared_error
+-0.1210 ± 0.0077
+[-0.12599801 -0.11669875 -0.12524998 -0.12900021 -0.1079303 ]
+params: {'nn__hidden_sizes': (200, 150), 'nn__batchnorm': True, 'nn__dropout': 0.7, 'nn__activation': 'leaky_relu', 'nn__optimizer': 'adamw', 'nn__weight_decay': 0.0001}
+
+20261027_121803 | nn | No param tuning | neg_root_mean_squared_error
+-0.1211 ± 0.0071
+[-0.12542208 -0.11699164 -0.12540293 -0.12866832 -0.1092334 ]
+params: {'nn__hidden_sizes': (200, 150), 'nn__batchnorm': True, 'nn__dropout': 0.7, 'nn__activation': 'leaky_relu', 'nn__optimizer': 'adamw', 'nn__weight_decay': 0.1}
+
+20261027_121823 | nn | No param tuning | neg_root_mean_squared_error
+-0.1385 ± 0.0144
+[-0.14739201 -0.1224454  -0.15306969 -0.14998729 -0.11960021]
+params: {'nn__hidden_sizes': (200, 150), 'nn__batchnorm': True, 'nn__dropout': 0.7, 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd'}
+
+20261027_121846 | nn | No param tuning | neg_root_mean_squared_error
+-0.1203 ± 0.0070
+[-0.12084727 -0.1184885  -0.12712492 -0.12701025 -0.10817997]
+params: {'nn__hidden_sizes': (100, 50), 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd'}
+
+20261027_121910 | nn | No param tuning | neg_root_mean_squared_error
+-0.1332 ± 0.0079
+[-0.14653069 -0.12877732 -0.13148575 -0.13624064 -0.12289516]
+params: {'nn__hidden_sizes': (100, 50), 'nn__dropout': 0.7, 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd'}
+
+20261027_121927 | nn | No param tuning | neg_root_mean_squared_error
+-0.1203 ± 0.0105
+[-0.1228776  -0.11790182 -0.12322795 -0.13477928 -0.10253346]
+params: {'nn__hidden_sizes': (50, 25), 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd'}
+
+20261027_122156 | nn | No param tuning | neg_root_mean_squared_error
+-0.1289 ± 0.0079
+[-0.12885391 -0.12781298 -0.13414603 -0.13844607 -0.1151182 ]
+params: {'nn__hidden_sizes': (100, 50), 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd', 'nn__epochs': 200}
+
+20261027_122232 | nn | No param tuning | neg_root_mean_squared_error
+-0.1289 ± 0.0079
+[-0.12885391 -0.12781298 -0.13414603 -0.13844607 -0.1151182 ]
+params: {'nn__hidden_sizes': (100, 50), 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd', 'nn__epochs': 200, 'nn__verbose': True}
+
+20261027_122335 | nn | No param tuning | neg_root_mean_squared_error
+-0.1343 ± 0.0085
+[-0.1340882  -0.13358491 -0.13810326 -0.14593324 -0.11986932]
+params: {'nn__hidden_sizes': (100, 50), 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd', 'nn__epochs': 300, 'nn__verbose': True}
+
+20261027_122504 | nn | No param tuning | neg_root_mean_squared_error
+-0.1175 ± 0.0080
+[-0.11835282 -0.11511181 -0.12655672 -0.12388665 -0.10373506]
+params: {'nn__hidden_sizes': (100, 50), 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd', 'nn__epochs': 50, 'nn__verbose': True}
+
+20261027_122516 | nn | No param tuning | neg_root_mean_squared_error
+-0.1182 ± 0.0077
+[-0.11927109 -0.11654369 -0.12603769 -0.12457788 -0.10436842]
+params: {'nn__hidden_sizes': (100, 50), 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd', 'nn__epochs': 75, 'nn__verbose': True}
+
+20261027_122526 | nn | No param tuning | neg_root_mean_squared_error
+-0.1199 ± 0.0076
+[-0.12241696 -0.11572532 -0.1265123  -0.12786023 -0.10721889]
+params: {'nn__hidden_sizes': (100, 50), 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd', 'nn__epochs': 25, 'nn__verbose': True}
+
+20261027_122542 | nn | No param tuning | neg_root_mean_squared_error
+-0.1175 ± 0.0080
+[-0.11835282 -0.11511181 -0.12655672 -0.12388665 -0.10373506]
+params: {'nn__hidden_sizes': (100, 50), 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd', 'nn__epochs': 50, 'nn__verbose': True}
+
+20261027_122643 | nn | No param tuning | neg_root_mean_squared_error
+-0.1330 ± 0.0073
+[-0.1339646  -0.13249566 -0.13648207 -0.14220931 -0.12000732]
+params: {'nn__hidden_sizes': (100, 50), 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd', 'nn__epochs': 50, 'nn__verbose': True, 'nn__lr': 0.01}
+
+20261027_122656 | nn | No param tuning | neg_root_mean_squared_error
+-0.1484 ± 0.0074
+[-0.15420706 -0.13876785 -0.15038575 -0.15782607 -0.14084927]
+params: {'nn__hidden_sizes': (100, 50), 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd', 'nn__epochs': 50, 'nn__verbose': True, 'nn__lr': 0.0001}
+
+20261027_122710 | nn | No param tuning | neg_root_mean_squared_error
+-0.1175 ± 0.0080
+[-0.11835282 -0.11511181 -0.12655672 -0.12388665 -0.10373506]
+params: {'nn__hidden_sizes': (100, 50), 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd', 'nn__epochs': 50, 'nn__verbose': True, 'nn__lr': 0.001}
+
+20261027_122819 | nn | No param tuning | neg_root_mean_squared_error
+-0.1198 ± 0.0078
+[-0.12182679 -0.11664568 -0.12647754 -0.12766904 -0.10625626]
+params: {'nn__hidden_sizes': (100, 50), 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd', 'nn__epochs': 50, 'nn__verbose': True, 'nn__lr': 0.001, 'nn__scheduler': 'cosine'}
+
+20261027_122836 | nn | No param tuning | neg_root_mean_squared_error
+-0.1170 ± 0.0078
+[-0.11803272 -0.11481283 -0.12507528 -0.12367416 -0.1032513 ]
+params: {'nn__hidden_sizes': (100, 50), 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd', 'nn__epochs': 100, 'nn__verbose': True, 'nn__lr': 0.001, 'nn__scheduler': 'cosine'}
+
+20261027_122850 | nn | No param tuning | neg_root_mean_squared_error
+-0.1200 ± 0.0073
+[-0.12042907 -0.11810528 -0.12728194 -0.12695064 -0.10725304]
+params: {'nn__hidden_sizes': (100, 50), 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd', 'nn__epochs': 200, 'nn__verbose': True, 'nn__lr': 0.001, 'nn__scheduler': 'cosine'}
+
+20261027_122916 | nn | No param tuning | neg_root_mean_squared_error
+-0.1370 ± 0.0092
+[-0.13891856 -0.13565521 -0.14166375 -0.14817351 -0.12065184]
+params: {'nn__hidden_sizes': (100, 50), 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd', 'nn__epochs': 200, 'nn__verbose': True, 'nn__lr': 0.01, 'nn__scheduler': 'cosine'}
+
+20261027_123028 | nn | No param tuning | neg_root_mean_squared_error
+-0.1164 ± 0.0074
+[-0.11798041 -0.11350432 -0.1239259  -0.12303273 -0.10373101]
+params: {'nn__hidden_sizes': (100, 50), 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd', 'nn__epochs': 100, 'nn__verbose': True, 'nn__lr': 0.001, 'nn__loss': 'huber'}
+
+20261027_123219 | nn | No param tuning | neg_root_mean_squared_error
+-0.1201 ± 0.0073
+[-0.12243314 -0.11547422 -0.12640999 -0.12782446 -0.10834253]
+params: {'nn__hidden_sizes': (100, 50), 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd', 'nn__epochs': 50, 'nn__verbose': True, 'nn__lr': 0.001, 'nn__loss': 'huber'}
+
+20261027_123309 | nn | No param tuning | neg_root_mean_squared_error
+-0.1175 ± 0.0080
+[-0.11835282 -0.11511181 -0.12655672 -0.12388665 -0.10373506]
+params: {'nn__hidden_sizes': (100, 50), 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd', 'nn__epochs': 50, 'nn__verbose': True, 'nn__lr': 0.001}
+

@@ -17,7 +17,7 @@ class RunConfig:
     models: tuple[str, ...] = ('nn',)
     tune_hyperparameters: bool = False
     cross_validate: bool = True
-    save_test_results: bool = False
+    save_test_results: bool = True
     use_saved_params: bool = True
     voting_members: tuple[str, ...] = ()
 

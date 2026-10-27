@@ -46,5 +46,10 @@ MODELS = {
     'catboost': MLModelConf(get_catboost_pipeline, CATBOOST_GRID,
                             model_params={'catboost__learning_rate': 0.05},
                             search_params={'n_jobs': 1, 'n_iter': 30}),
-    'nn': MLModelConf(get_nn_pipeline, NN_GRID),
+    'nn': MLModelConf(get_nn_pipeline, NN_GRID,
+                      model_params={'nn__hidden_sizes': (100, 50),
+                                    'nn__activation': 'leaky_relu',
+                                    'nn__optimizer': 'sgd',
+                                    'nn__lr': 0.001,
+                                    'nn__epochs': 50}),
 }
