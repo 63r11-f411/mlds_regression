@@ -586,3 +586,19 @@ params: {'nn__hidden_sizes': (100, 50), 'nn__activation': 'leaky_relu', 'nn__opt
 [-0.11835282 -0.11511181 -0.12655672 -0.12388665 -0.10373506]
 params: {'nn__hidden_sizes': (100, 50), 'nn__activation': 'leaky_relu', 'nn__optimizer': 'sgd', 'nn__epochs': 50, 'nn__verbose': True, 'nn__lr': 0.001}
 
+20261027_133220 | voting | No param tuning | neg_root_mean_squared_error
+-0.1093 ± 0.0080
+[-0.1113872  -0.10673545 -0.11653182 -0.11661602 -0.09512483]
+
+20261027_133507 | voting | No param tuning | neg_root_mean_squared_error
+-0.1095 ± 0.0082
+[-0.11087863 -0.10660251 -0.11780679 -0.11674114 -0.09523219]
+
+20261027_134543 | stacking | No param tuning | neg_root_mean_squared_error
+-0.1092 ± 0.0083
+[-0.11056246 -0.10682431 -0.11743892 -0.11654358 -0.09451014]
+
+20261027_135113 | stacking | No param tuning | neg_root_mean_squared_error
+-0.1091 ± 0.0083
+[-0.11058947 -0.10657542 -0.11742659 -0.11652493 -0.09446366]
+

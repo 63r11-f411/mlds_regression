@@ -1,4 +1,5 @@
 from collections.abc import Callable
+from functools import partial
 from dataclasses import dataclass, field
 from config import RUNCONF
 from utility import load_best_params
@@ -10,6 +11,8 @@ from .decision_tree import get_tree_pipeline, PARAM_GRID as TREE_GRID
 from .gb_xgb import get_xgb_pipeline, PARAM_GRID as XGB_GRID
 from .gb_catboost import get_catboost_pipeline, PARAM_GRID as CATBOOST_GRID
 from .nn import get_nn_pipeline, PARAM_GRID as NN_GRID
+from .voting import get_voting_regressor
+from .stacking import get_stacking_regressor
 
 @dataclass(frozen=True)
 class MLModelConf:
@@ -53,4 +56,6 @@ MODELS = {
                                     'nn__lr': 0.001,
                                     'nn__epochs': 50},
                       search_params={'n_iter': 40}),
+    'voting': MLModelConf(partial(get_voting_regressor, build_model, RUNCONF.ensemble_members), search_params={'n_jobs': 1}),
+    'stacking': MLModelConf(partial(get_stacking_regressor, build_model, RUNCONF.ensemble_members), search_params={'n_jobs': 1}),
 }

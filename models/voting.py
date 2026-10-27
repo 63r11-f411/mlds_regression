@@ -1,6 +1,6 @@
-from sklearn.ensemble import VotingClassifier
+from sklearn.ensemble import VotingRegressor
 
 
-def build_voting_classifier(build_member, member_names, voting='soft', weights=None):
+def get_voting_regressor(build_member, member_names, weights=None):
     estimators = [(name, build_member(name)) for name in member_names]
-    return VotingClassifier(estimators=estimators, voting=voting, weights=weights)
+    return VotingRegressor(estimators=estimators, weights=weights)
